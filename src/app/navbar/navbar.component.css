@@ -1,0 +1,13 @@
+.navigation{
+    background-color:#0fb9b1;
+}
+
+.register{
+    background-color: #fc5c65;
+}
+.login{
+    background-color: #26de81;
+}
+.topnav a:hover {
+    border-bottom: 1px solid rgb(0, 0, 0);
+}

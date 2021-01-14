@@ -1,0 +1,34 @@
+<div id="id01" class="container">
+    <div class="main">
+        <h2>Enregistrement  {{ username }} {{ lastname }} {{ email }} </h2>
+    <form class="form" action="#" name="formreg" id="formlog">
+     
+      <div class="container">
+        <div class="mb-3">
+        <label for="name"><b>Username</b></label>
+        <input type="text" class="form-control" [(ngModel)]="username" placeholder="Username" name="name" id="name" required>
+        </div>
+        <div class="mb-3">
+        <label for="pernom"><b>User lastname</b></label>
+        <input type="text" class="form-control" [(ngModel)]="lastname" placeholder="Last name" name="pernom" id="prenom" required>
+        </div>
+        <div class="mb-3">
+          <label for="email"><b>Email</b></label>
+          <input type="email" class="form-control" [(ngModel)]="email" placeholder="E-mail" name="email" id="email" required>
+          </div>
+        <div class="mb-3">
+        <label for="age"><b>age</b></label>
+        <input type="text" class="form-control" [(ngModel)]="age" placeholder="age" name="age" id="age" required>
+        </div>
+        <div class="mb-3">
+        <label for="psw"><b>Password</b></label>
+        <input type="password" class="form-control" [(ngModel)]="pwd" placeholder="Password" name="pwd" id="pwd" required>
+        </div>
+        <div class="mb-3">         
+        <input type="button" name="valider" (click)="validateForm()" class="btn btn-success btn-lg btn-block" value="inscription">
+        </div>
+    
+      </div>
+    </form>
+    </div>
+  </div>
