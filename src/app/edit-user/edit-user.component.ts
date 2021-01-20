@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit-user',
@@ -17,7 +17,7 @@ pwd;
 
 data = JSON.parse(localStorage.getItem('users'));
 
-  constructor(private activatedRouter: ActivatedRoute) {
+  constructor(private activatedRouter: ActivatedRoute, private router:Router) {
    }
 
   ngOnInit(): void {
@@ -43,6 +43,6 @@ data = JSON.parse(localStorage.getItem('users'));
     this.data[this.index].pwd = this.pwd;
 
     localStorage.setItem('users', JSON.stringify(this.data));
-    window.location.replace("http://localhost:4200/login");
+    this.router.navigateByUrl("/login");
   }
 }
