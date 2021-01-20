@@ -11,6 +11,7 @@ import { P404Component } from './p404/p404.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomepageComponent } from './homepage/homepage.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AcceuilComponent } from './acceuil/acceuil.component';
     FooterComponent,
     P404Component,
     HomepageComponent,
-    AcceuilComponent
+    AcceuilComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule,

@@ -1,17 +1,24 @@
 <div class="container ">
-    <div class="main">
     <h2>Home Page  </h2>
-    <form id="homeform" method="post" name="homeform">
-    <div class="container mb-5">
-        <div class="form-outline">
-            <p id="usr" class="mb-5 mt-5"></p>
-    </div>
-    
-        <div class="mb-5">
-            <a (click)="displaydata()" href="http://localhost:4200/login" class="btn btn-danger btn-block"> Display & Logout</a>
-        </div>
-        
-    </div>
-    </form>
-    </div>
-    </div>
+    <table class="table table-bordred table-hover table-striped">
+        <tr>
+            <th>Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>E-mail</th>
+            <th>Actions</th>
+        </tr>
+        <tr *ngFor="let element of users; let i = index">
+            <td >{{element.name}}</td>
+            <td >{{element.lastname}}</td>
+            <td >{{element.age}}</td>
+            <td >{{element.Mail}}</td>
+            <td>
+                <a class="btn btn-outline-info" [routerLink]="['/edit', i ]">Edit</a>
+                <a class="btn btn-outline-danger" (click)="deleteUser(i)">Delete </a>
+            </td>
+            
+        </tr>
+    </table>
+      
+</div>

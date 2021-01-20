@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,30 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
-  email;
-  pwd;
-    ngOnInit(): void {
+	email;
+	pwd;
+	data = JSON.parse(localStorage.getItem('users')) || [];
+  constructor(private router:Router) { }
+
+  ngOnInit(): void {
+
   }
 
-
-
-
-  data = JSON.parse(localStorage.getItem('users'));
 	login(){
-	 let loguser = 
-			{
-			username : this.email,
-			password: this.pwd,
-			}
-	
-		if (this.data.find(x => x.Mail == this.email && x.pwd==this.pwd))
-		{ 	
-			window.location.replace("http://localhost:4200/home");
+		let loguser =  this.data.find(x => x.Mail == this.email && x.pwd==this.pwd)
+		if(loguser !== undefined)
+		{
+			//window.location.replace("http://localhost:4200/home");
+			this.router.navigateByUrl("/home");
+
 			localStorage.setItem('userConnect', JSON.stringify(loguser));
 		}
 		else
-			alert ("user undefind");
+		{
+			alert ("verify your e-mail or password !!!");
+		}	
 
 	}
 

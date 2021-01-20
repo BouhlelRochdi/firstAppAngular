@@ -8,26 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistreComponent implements OnInit {
 
-  constructor() { }
   username;
   lastname;
   email;
   age;
   pwd;
   a = JSON.parse(localStorage.getItem('users')) || [];
+  constructor() { }
   ngOnInit(): void {
   }
-  
-  
+    
   validateForm(){
-    alert (this.username + " " + this.lastname + " " + this.age + " " + this.pwd);
-  let user = {
-  name:this.username,
-  lastname:this.lastname,
-  Mail: this.email,
-  age: this.age,
-  pwd: this.pwd
-}
+    // alert (this.username + " " + this.lastname + " " + this.age + " " + this.pwd);
+      let user = {
+      name:this.username,
+      lastname:this.lastname,
+      Mail: this.email,
+      age: this.age,
+      pwd: this.pwd
+    }
     this.saveDataToLocalStorage(user);
     this.newpage();
 

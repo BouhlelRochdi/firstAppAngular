@@ -1,0 +1,19 @@
+[0118/091221.299:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0118/131113.447:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\rochd\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\98f918af-3ee8-4fa1-b5cd-8b27bcf56ce0: The system cannot find the path specified. (0x3)
+[0118/170138.680:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0118/170138.687:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0118/170138.680:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0118/170138.688:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0118/170138.842:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0118/170139.041:ERROR:exception_snapshot_win.cc(99)] thread ID 6356 not found in process
+[0118/170139.099:ERROR:exception_snapshot_win.cc(99)] thread ID 4940 not found in process
+[0118/170139.041:ERROR:exception_snapshot_win.cc(99)] thread ID 10876 not found in process
+[0118/170139.099:ERROR:exception_snapshot_win.cc(99)] thread ID 11712 not found in process
+[0118/170139.099:ERROR:exception_snapshot_win.cc(99)] thread ID 13056 not found in process
+[0118/170138.695:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0118/170138.693:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0118/170139.127:ERROR:exception_snapshot_win.cc(99)] thread ID 6496 not found in process
+[0118/170139.127:ERROR:exception_snapshot_win.cc(99)] thread ID 13272 not found in process
+[0118/170139.577:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0118/170139.577:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0118/170139.578:ERROR:exception_snapshot_win.cc(99)] thread ID 5608 not found in process
