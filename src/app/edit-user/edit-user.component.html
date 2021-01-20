@@ -6,7 +6,7 @@
       <div class="container">
         <div class="mb-3">
         <label for="name"><b>Your Name</b></label>
-        <input type="text" class="form-control" name="name" id="name" [value]="username" required>
+        <input type="text" [(ngModel)]="username" class="form-control" name="name" id="name" [value]="username" required>
         </div>
         <div class="mb-3">
         <label for="pernom"><b>Your lastname</b></label>
