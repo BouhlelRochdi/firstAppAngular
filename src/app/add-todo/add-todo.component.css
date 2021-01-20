@@ -1,0 +1,13 @@
+.addbutton {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #8a8888;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }

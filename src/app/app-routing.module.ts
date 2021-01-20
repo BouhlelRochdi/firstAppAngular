@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AcceuilComponent } from './acceuil/acceuil.component';
+import { AddTodoComponent } from './add-todo/add-todo.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path:'edit/:index',
     component: EditUserComponent
+  },
+  {
+    path:'add-todo',
+    component: AddTodoComponent
   },
   {
     path: '**',

@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomepageComponent } from './homepage/homepage.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { AddTodoComponent } from './add-todo/add-todo.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { EditUserComponent } from './edit-user/edit-user.component';
     P404Component,
     HomepageComponent,
     AcceuilComponent,
-    EditUserComponent
+    EditUserComponent,
+    AddTodoComponent
   ],
   imports: [
     BrowserModule,

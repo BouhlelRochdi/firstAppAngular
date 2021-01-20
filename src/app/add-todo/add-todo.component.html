@@ -1,0 +1,16 @@
+<div class="container">
+    <div style="text-align:center">
+      <h2>ADD TO-DO Page</h2>
+    </div>
+    <div class="row">
+      <div class="column">
+        <form class="form-control" [formGroup]="addForm">
+          <label for="fname">Name</label>
+          <input type="text"formControlName="addFormname" class="form-control" id="name" name="name">
+          <label for="description">Déscription</label>
+          <input type="text" formControlName="addFormdesc" class="form-control" id="description" name="description">
+          <input type="button" name="add" class="btn btn-info btn-lg btn-block addbutton" value="Ajouter">
+        </form>
+      </div>
+    </div>
+  </div>

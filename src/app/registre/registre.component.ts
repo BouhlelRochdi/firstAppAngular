@@ -1,5 +1,6 @@
 import { formatCurrency } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registre',
@@ -14,7 +15,7 @@ export class RegistreComponent implements OnInit {
   age;
   pwd;
   a = JSON.parse(localStorage.getItem('users')) || [];
-  constructor() { }
+  constructor(private router:Router) { }
   ngOnInit(): void {
   }
     
@@ -37,6 +38,6 @@ export class RegistreComponent implements OnInit {
   localStorage.setItem('users', JSON.stringify(this.a));
  }
  newpage() {
-  window.location.replace("http://localhost:4200/login");
+  this.router.navigateByUrl("/login");
 }
 }
