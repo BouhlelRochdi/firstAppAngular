@@ -5,10 +5,12 @@
     <div class="row">
       <div class="column">
         <form class="form-control" [formGroup]="addTodoForm">
-          <label for="fname">Name</label>
-          <input type="text" formControlName="name" class="form-control is-valid" id="name" name="name">
-          <label for="description">Déscription</label>
-          <input type="text" formControlName="description" class="form-control is-invalid" id="description" name="description">
+          <label for="fname"><b>Name</b></label>
+          <input type="text" formControlName="name" class="form-control" id="name" name="name">
+          <div *ngIf="nameError()">Name is required.</div>
+          <label for="description"><b>Déscription</b></label>
+          <input type="text" formControlDescription="description" class="form-control" id="description" name="description">
+          <div *ngIf="descriptionError()">Description is required.</div>
           <input type="button" name="add" class="btn btn-info btn-lg btn-block addbutton" value="Ajouter" (click)="save()">
         </form>
       </div>
