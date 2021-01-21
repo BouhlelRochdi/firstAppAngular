@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormControlDirective, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormControlDirective, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-todo',
@@ -13,14 +13,30 @@ export class AddTodoComponent implements OnInit {
 
   ngOnInit(): void {
     this.addTodoForm = new FormGroup({
-      name: new FormControl(''),
-      description: new FormControl('')
+      name: new FormControl('', [Validators.required, Validators.minLength(8)]),
+      description: new FormControl('',[Validators.required, Validators.minLength(8)])
     });
-  }
-
-  save(){
-    console.log(this.addTodoForm.value);
     
   }
+ 
+  save(){
+    console.log(this.addTodoForm.value);
+    console.log(this.addTodoForm.controls);
+}
+nameError() {
+
+  const name = this.addTodoForm.controls.name;
+
+  return name.touched && name.hasError('required');
 
 }
+descriptionError() {
+
+  const description = this.addTodoForm.controls.description;
+
+  return description.touched && description.hasError('required');
+
+}
+
+    
+  }
