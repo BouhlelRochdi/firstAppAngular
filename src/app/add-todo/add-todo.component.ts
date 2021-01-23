@@ -15,7 +15,6 @@ export class AddTodoComponent implements OnInit {
   ngOnInit(): void {
     this.addTodoForm = new FormGroup({
       name: new FormControl('', [Validators.required, Validators.minLength(8)]),
-      lastname : new FormControl('', Validators.requiredTrue),
       description: new FormControl('', [Validators.required, Validators.maxLength(8)])
 
     });
