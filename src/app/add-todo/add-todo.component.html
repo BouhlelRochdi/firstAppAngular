@@ -9,7 +9,7 @@
             <b>Name</b>
           </label>
           <input type="text" formControlName="name" class="form-control" id="name">
-          <div *ngIf="addTodoForm.controls.name.invalid && addTodoForm.controls.name.touched">
+          <div *ngIf="addTodoForm.controls.name.invalid && addTodoForm.controls.name.touched" class="col-sm-3 text-danger">
               Name is invalid (min 8 chars)    
           </div>
 
@@ -17,7 +17,7 @@
             <b>Déscription</b>
           </label>
           <input type="text" formControlName="description" class="form-control" id="description">
-          <div *ngIf="addTodoForm.controls.description.invalid && addTodoForm.controls.description.touched">
+          <div *ngIf="addTodoForm.controls.description.invalid && addTodoForm.controls.description.touched" class="col-sm-3 text-danger">
             Description is invalid or Empty (min 8 chars)        
           </div>
           
