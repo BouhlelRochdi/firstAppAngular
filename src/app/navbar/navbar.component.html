@@ -1,33 +1,41 @@
-<nav class="navbar navbar-expand-lg navigation navbar-dark mb-3 fixed-top position-relative text-center">
-    <a class="navbar-brand" href="http://localhost:4200/accueil">Angular APP Logo</a>
-    <button class="navbar-toggler" aria-expanded="false" aria-controls="collapsibleNavbar" aria-label="Toggle navigation"
-     type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="http://localhost:4200/accueil">Acceuil</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Projets</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Réalisation</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
-      </li>
-    </ul>
-    <ul class="navbar-nav ml-auto topnav">
+
+
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-3 fixed-top position-relative">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Navbar brand -->
+    <a class="navbar-brand" [routerLink]="['accueil']">Angular APP Logo</a>
+
+    <!-- Toggle button -->
+    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" 
+    data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-            <a class="nav-link btn login btn-md btn-block" href="http://localhost:4200/login">Login</a>
+          <a class="nav-link" aria-current="page" [routerLink]="['home']">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link btn register btn-md btn-block" href="http://localhost:4200/register">Register</a>
+          <a class="nav-link" [routerLink]="['add-todo']">Add To Do</a>
         </li>
-    </ul>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['list-todo']">List To Do</a>
+        </li>
+      </ul>
+      <!-- Left links -->
 
-</div>
-
-  </nav>
+      <!-- Right links -->
+      <form class="d-flex input-group w-auto">
+        <a class="nav-link btn btn-outline-success" [routerLink]="['login']">Login</a>
+        <a class="nav-link btn btn-outline-danger" [routerLink]="['register']">Register</a>
+      </form>
+    </div>
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
